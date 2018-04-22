@@ -2538,9 +2538,9 @@ bool LoadBlockIndex(bool fAllowNew)
         //    CTxOut(empty)
         //  vMerkleTree: 12630d16a9
 
-        const char* pszTimestamp = "The Times 03 Jan 2009 Chancellor on brink of second bailout for banks";
+        const char* pszTimestamp = "Le 25 noel 2014 le pere noel est passe";
         CTransaction txNew;
-        txNew.nTime = 1502292612;
+        txNew.nTime = 1524397143;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -2550,7 +2550,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1502292612;
+        block.nTime    = 1524397143;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
         block.nNonce   = !fTestNet ? 1734672 : 1734672;
         
